@@ -1,12 +1,12 @@
 // Prueba getFullName
 
-let usuario1 = new User('Eduardo', 'Gramajo', [], []);
+let usuario1 = new UserFC('Eduardo', 'Gramajo', [], []);
 console.log(usuario1.getFullName());
 
 
 // Prueba addMascota
 
-let usuario2 = new User('Rigo', 'Miranda', [], ['Junior','Chiquita','Kimba','Jesica']);
+let usuario2 = new UserFC('Rigo', 'Miranda', [], ['Junior','Chiquita','Kimba','Jesica']);
 
 usuario2.addPet('Cabezón');
 

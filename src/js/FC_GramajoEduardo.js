@@ -1,23 +1,23 @@
-function User (name, surname, books, pets) {
+function UserFC (name, surname, books, pets) {
     this.name = name;
     this.surname = surname;
     this.books = books? books : [];
     this.pets = pets? pets : [];
 }
 
-User.prototype.getFullName = function () {
+UserFC.prototype.getFullName = function () {
     return `${this.name} ${this.surname}`;
 }
 
-User.prototype.addPet = function (newPet) {
+UserFC.prototype.addPet = function (newPet) {
     this.pets.push(newPet);
 }
 
-User.prototype.getPets = function () {
+UserFC.prototype.getPets = function () {
     return this.pets.length;
 }
 
-User.prototype.addBook = function(book, author){
+UserFC.prototype.addBook = function(book, author){
     let newBook = {
         title: book,
         author: author,
@@ -25,10 +25,9 @@ User.prototype.addBook = function(book, author){
     this.books.push(newBook);
 }
 
-User.prototype.getBooks = function () {
+UserFC.prototype.getBooks = function () {
     let bookList = this.books.map(function (book) {
         return book.title;        
     })
-    //console.log(bookList);
     return bookList;
 }
